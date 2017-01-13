@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<integer name="article_size">229</integer>
+	<integer name="zoom_factor">4</integer>
+	<integer name="bookmark_size">10</integer>
+</resources>

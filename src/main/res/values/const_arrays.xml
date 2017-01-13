@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- debut titres -->
+	<array name="titre_1">
+		<item>Chapitre 1</item>
+		<item>Chapitre 2</item>
+	</array>
+	<array name="titre_2">
+		<item>Chapitre 1</item>
+		<item>Chapitre 2</item>
+		<item>Chapitre 3</item>
+		<item>Chapitre 4</item>
+	</array>
+	<array name="titre_3">
+		<item>Chapitre 1</item>
+	</array>
+	<array name="titre_4">
+		<item>Chapitre 1</item>
+		<item>Chapitre 2</item>
+		<item>Chapitre 3</item>
+	</array>
+	<array name="titre_5">
+		<item>Article 208</item>
+		<item>Article 209</item>
+		<item>Article 210</item>
+	</array>
+	<array name="titre_6">
+		<item>Chapitre 1</item>
+		<item>Chapitre 2</item>
+	</array>
+	<array name="titre_7">
+		<item>Article 213</item>
+		<item>Article 214</item>
+		<item>Article 215</item>
+		<item>Article 216</item>
+		<item>Article 217</item>
+	</array>
+	<array name="titre_8">
+		<item>Article 218</item>
+		<item>Article 219</item>
+		<item>Article 220</item>
+	</array>
+	<array name="titre_9">
+		<item>Article 221</item>
+		<item>Article 222</item>
+		<item>Article 223</item>
+		<item>Article 224</item>
+		<item>Article 225</item>
+		<item>Article 226</item>
+		<item>Article 227</item>
+		<item>Article 228</item>
+		<item>Article 229</item>
+	</array>
+	<!-- debut chapitres -->
+	<!-- titre 1 -->
+	<array name="titre_1_chapitre_1">
+		<item>Section 1</item>
+		<item>Section 2</item>
+	</array>
+	<array name="titre_1_chapitre_2">
+		<item>Article 10</item>
+	</array>
+	<!-- titre 2 -->
+	<array name="titre_2_chapitre_1">
+		<item>Article 11</item>
+		<item>Article 12</item>
+		<item>Article 13</item>
+		<item>Article 14</item>
+		<item>Article 15</item>
+		<item>Article 16</item>
+		<item>Article 17</item>
+		<item>Article 18</item>
+		<item>Article 19</item>
+		<item>Article 20</item>
+		<item>Article 21</item>
+		<item>Article 22</item>
+		<item>Article 23</item>
+		<item>Article 24</item>
+		<item>Article 25</item>
+		<item>Article 26</item>
+		<item>Article 27</item>
+		<item>Article 28</item>
+		<item>Article 29</item>
+		<item>Article 30</item>
+		<item>Article 31</item>
+		<item>Article 32</item>
+		<item>Article 33</item>
+	</array>
+	<array name="titre_2_chapitre_2">
+		<item>Article 34</item>
+		<item>Article 35</item>
+		<item>Article 36</item>
+		<item>Article 37</item>
+		<item>Article 38</item>
+		<item>Article 39</item>
+		<item>Article 40</item>
+		<item>Article 41</item>
+		<item>Article 42</item>
+		<item>Article 43</item>
+		<item>Article 44</item>
+		<item>Article 45</item>
+		<item>Article 46</item>
+		<item>Article 47</item>
+		<item>Article 48</item>
+		<item>Article 49</item>
+	</array>
+	<array name="titre_2_chapitre_3">
+		<item>Article 50</item>
+		<item>Article 51</item>
+		<item>Article 52</item>
+		<item>Article 53</item>
+		<item>Article 54</item>
+		<item>Article 55</item>
+		<item>Article 56</item>
+		<item>Article 57</item>
+		<item>Article 58</item>
+		<item>Article 59</item>
+		<item>Article 60</item>
+		<item>Article 61</item>
+	</array>
+	<array name="titre_2_chapitre_4">
+		<item>Article 62</item>
+		<item>Article 63</item>
+		<item>Article 64</item>
+		<item>Article 65</item>
+		<item>Article 66</item>
+		<item>Article 67</item>
+	</array>
+	<!-- titre 3 -->
+	<array name="titre_3_chapitre_1">
+		<item>Article 68</item>
+		<item>Section 1</item>
+		<item>Section 2</item>
+		<item>Section 3</item>
+		<item>Section 4</item>
+		<item>Section 5</item>
+		<item>Section 6</item>
+		<item>Section 7</item>
+	</array>
+	<!-- titre 4 -->
+	<array name="titre_4_chapitre_1">
+		<item>Article 195</item>
+		<item>Article 196</item>
+		<item>Article 197</item>
+		<item>Article 198</item>
+		<item>Article 199</item>
+		<item>Article 200</item>
+	</array>
+	<array name="titre_4_chapitre_2">
+		<item>Article 201</item>
+		<item>Article 202</item>
+		<item>Article 203</item>
+		<item>Article 204</item>
+		<item>Article 205</item>
+		<item>Article 206</item>
+	</array>
+	<array name="titre_4_chapitre_3">
+		<item>Article 207</item>
+	</array>
+	<!-- titre 6 -->
+	<array name="titre_6_chapitre_1">
+		<item>Article 211</item>
+	</array>
+	<array name="titre_6_chapitre_2">
+		<item>Article 212</item>
+	</array>
+	<!-- debut sections -->
+	<!-- titre 1 chapitre 1 -->
+	<array name="titre_1_chapitre_1_section_1">
+		<item>Article 1</item>
+		<item>Article 2</item>
+		<item>Article 3</item>
+		<item>Article 4</item>
+	</array>
+	<array name="titre_1_chapitre_1_section_2">
+		<item>Article 5</item>
+		<item>Article 6</item>
+		<item>Article 7</item>
+		<item>Article 8</item>
+		<item>Article 9</item>
+	</array>
+	<!-- titre 3 chapitre 1 -->
+	<!-- sections de titre 3 -->
+
+	<!-- paragraphes de titre 3 -->
+	
+</resources>

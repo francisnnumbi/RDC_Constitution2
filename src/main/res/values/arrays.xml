@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<resources>
+		<array name="drawer_items">
+			<item>Articles</item>
+			<item>Recherche</item>
+			<item>À Propos</item>
+			<item>Quitter</item>
+		</array>
+		<array name="a">
+			<item>à</item>
+			<item>á</item>
+			<item>â</item>
+			<item>ä</item>
+			<item>æ</item>
+			<item>ã</item>
+			<item>å</item>
+			<item>ā</item>
+		</array>
+		<array name="e">
+			<item>é</item>
+			<item>ê</item>
+			<item>è</item>
+			<item>ë</item>
+			<item>ē</item>
+		</array>
+		<array name="i">
+			<item>ï</item>
+			<item>î</item>
+			<item>í</item>
+			<item>ì</item>
+			<item>ī</item>
+		</array>
+		<array name="o">
+			<item>ô</item>
+			<item>ó</item>
+			<item>ö</item>
+			<item>ò</item>
+			<item>ō</item>
+			<item>õ</item>
+		</array>
+		<array name="u">
+			<item>ù</item>
+			<item>û</item>
+			<item>ú</item>
+			<item>ü</item>
+			<item>ū</item>
+		</array>
+		<array name="c">
+			<item>ç</item>
+		</array>
+		<array name="n">
+			<item>ñ</item>
+		</array>
+		
+	</resources>

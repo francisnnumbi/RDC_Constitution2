@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<resources>
+		<string name="app_programmer">Francis Nduba Numbi</string>
+		<string name="app_programmer_email">Contact Us: francisnnumbi@gmail.com</string>
+		<string name="vers_year">Copyright © 2007 - 2017 Scorpio Microprocessing Research Lab. All rights reserved.</string>
+		<string name="blog_site">blog site: http://fnnumbi2.wordpress.com</string>
+		<string name="about_app_info">
+			Ce logiciel est un outil indispensable pour tout congolais de la RDC. 
+			\nC\'est bien sûr un logiciel de constitution comme tant d\'autres avant moi. 
+			\n
+			\nMais il a l\'avantage d\'être capable de:
+			\n- Selectionner et copier les articles,
+			\n- Zoomer,
+			\n- Faire des recherches,
+			\n- Partager directement les articles,
+			\n- Lire à voix haute.
+			\n
+			\nBientôt il y aura possibilié de placer des articles dans un signet.
+			\n
+			\nJe vous prie de bien vouloir partager librement ce logiciel.
+			C\'est un fruit de l\'amour pour son pays. 
+			\n
+			\nLa Constitution est fondamentale pour tout un chacun. 
+			J\'aimerais voir un cours de Droit être integré depuis l\'école primaire.
+			\n
+			\nS\'il y a un bogue, n\'hesitez pas à m\'en informer par mon adresse email. 
+			\n\nMerci.</string>
+			
+			<string name="debout_congolais_fr">
+				Debout Congolais,
+				\nUnis par le sort
+				\nUnis dans l\'effort
+				\npour l\'indépendence.
+				\nDressons nos fronts, longtemps
+				\ncourbés
+				\nEt pour de bon prenons le plus bel
+				\nélan,
+				\nDans la paix
+				\nÔ peuple ardent
+				\nPar le labeur
+				\nNous bâtirons un pays plus beau
+				\nqu\'avant
+				\nDans la paix
+				\nCitoyens
+				\nEntonnez l\'hymne sacré de votre
+				\nsolidarité
+				\nFièrement
+				\nSaluez l\'emblème d\'or
+				\nde votre souveraineté
+				\nCongo!
+				\nDon béni, Congo!
+				\nDes aïeux, Congo!
+				\nÔ pays, Congo!
+				\nBien aimé, Congo!
+				\nNous peuplerons ton sol
+				\net nous assurerons ta grandeur
+				\nTrente juin, ô doux soleil
+				\nTrente juin, du trente juin
+				\nJour sacré, soit le temoin
+				\nJour sacré, de l\'immortel
+				\nSerment de liberté
+				\nQue nous léguons
+				\nÀ notre postérité
+				\nPour toujours.
+				\n
+				\n(Rev.P. S-P. Boka et J. Lutumba - 1960)
+			</string>
+			<string name="hymne_source">Hymne national aource : http://www.congoplanete.com/telecharger.jsp
+			</string>
+	</resources>

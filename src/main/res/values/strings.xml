@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="nom_portail_tab">Portail</string>
+	<string name="nom_articles_tab">Articles</string>
+	<string name="nom_recherche_tab">Recherche</string>
+	<string name="nom_hymn_tab">Hymne Nationale</string>
+	<string name="nom_signet_tab">Signet</string>
+	<string name="nom_options_tab">Options</string>
+	
+	<string name="app_name">RDC Constitution</string>
+	<string name="app_title">Hymne national de la République Démocratique du Congo</string>
+    <string name="article_btn">Articles</string>
+	<string name="sharing_statement">Choisir la methode de partage</string>
+	<string name="titre_btn">Titres</string>
+	<string name="search_btn">Recherche</string>
+	<string name="article_name">Article</string>
+	<string name="drawer_open">Open navigation drawer</string>
+	<string name="drawer_close">Close navigation drawer</string>
+</resources>
