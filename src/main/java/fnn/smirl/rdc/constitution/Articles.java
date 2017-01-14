@@ -42,23 +42,6 @@ public class Articles extends Fragment
 	populateList();
  }
 
-// public void share()
-// {
-//	Constitution cc= null;
-//	try
-//	{
-//	 cc = (Constitution)(articleslist.getItemAtPosition(selectedListItemId));
-//	 Sharing.share(this, cc);
-//	}
-//	catch (Exception exe)
-//	{
-//	 Toast
-//		.makeText(MaConstitution.APPLICATION_CONTEXT, cc.toString(), Toast.LENGTH_SHORT)
-//		.show();
-//
-//	}
-// }
-
  //populate list
  private void populateList()
  {
@@ -132,9 +115,11 @@ public class Articles extends Fragment
 		 {
 			selectedListItemId = p3;
 			String dex = articleslist.getItemAtPosition(p3).toString();
-			String value = ((Constitution)articleslist.getItemAtPosition(p3)).toDetailedString();
+			cons = (Constitution)articleslist.getItemAtPosition(p3);
+			String value = cons.toDetailedString();
 			article_viewer.setText(value);
 			active_article.setText(dex);
+			MaConstitution.SHARABLE_CONSTITUTION = cons;
 		 }
 		 catch (Exception ex)
 		 {
@@ -156,6 +141,7 @@ public class Articles extends Fragment
 
  private void pause(){
 	handler1.removeCallbacks(r1);
+	
  }
 
  private class MyRunner implements Runnable{
@@ -164,18 +150,19 @@ public class Articles extends Fragment
 	public void run()
 	{
 	 if (!Tts.isReading()){
-		Toast.makeText(MaConstitution.APPLICATION_CONTEXT, "Reading completed",
-		Toast.LENGTH_SHORT)
-		.show();
+		
+//		Toast.makeText(MaConstitution.APPLICATION_CONTEXT, "Reading completed",
+//		Toast.LENGTH_SHORT)
+//		.show();
 		
 		articles_play_tts.setChecked(false);
+		articles_play_tts.setBackgroundResource(R.drawable.speech_toggle_selector);
 		pause();
 	 }
 
 	 handler1.postDelayed(r1, PAUSE);
 	}
  }
-
 
 
  // Declaration of field variables
@@ -188,10 +175,12 @@ public class Articles extends Fragment
  ListView articleslist;
  TextView active_article, article_viewer;
  ToggleButton articles_play_tts;
+ 
+ Constitution cons = null;
 
- private Handler handler1;
+ private Handler handler1 = new Handler();
  private MyRunner r1;
- private final int PAUSE = 1000;
+ private final int PAUSE = 500;
 
  ArrayList<String> bm = new ArrayList<String>();
  public final String PREFS_NAME = "rdc_const_bm";

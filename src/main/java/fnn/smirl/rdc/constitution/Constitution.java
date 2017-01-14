@@ -9,6 +9,10 @@ public class Constitution
 	public Constitution(){
 		
 	}
+	public Constitution(String article, String text){
+	 this("","","","",article,text);
+	}
+	
 	public Constitution(String titre, String chapter, String section, String paragraphe, String article, String text){
 		this.titre = titre;
 		this.chapter = chapter;

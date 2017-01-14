@@ -15,10 +15,16 @@ import android.view.MenuInflater;
 import android.content.Intent;
 import fnn.smirl.rdc.constitution.info.About;
 import fnn.smirl.rdc.constitution.info.AppInfo;
+import android.os.Handler;
+import android.support.v4.app.ShareCompat;
+import android.app.Activity;
 
 public class MaConstitution extends FragmentActivity
 implements ActionBar.TabListener
 {
+ 
+ public static Constitution SHARABLE_CONSTITUTION 
+ = new Constitution("", "");
 
  public static Context APPLICATION_CONTEXT;
 
@@ -116,6 +122,7 @@ implements ActionBar.TabListener
 	// TODO: Implement this method
 	super.onStop();
 	stop_tts();
+	
  }
 
  @Override
@@ -125,9 +132,15 @@ implements ActionBar.TabListener
 	super.onDestroy();
 	shutDown_tts();
  }
- 
- 
 
+ @Override
+ public void onBackPressed()
+ {
+	// TODO: Implement this method
+	super.onBackPressed();
+	shutDown_tts();
+ }
+ 
  /**
 	* stop reading text aloud
 	*/
@@ -160,12 +173,32 @@ implements ActionBar.TabListener
  {
 	// TODO: Implement this method
 	switch(item.getItemId()){
+	 case R.id.mm_share:
+		share();
+		break;
 	 case R.id.mm_about:
 		startActivity(new Intent(getApplicationContext(), About.class));
 		break;
 	}
 	return super.onOptionsItemSelected(item);
  }
+ 
+  public void share()
+ {
+if(SHARABLE_CONSTITUTION != null){
+	 ShareCompat.IntentBuilder
+	 .from((Activity)this)
+	 .setText(SHARABLE_CONSTITUTION.toDetailedString())
+	 .setType("text/plain")
+	 .setChooserTitle(SHARABLE_CONSTITUTION.getArticle())
+	.startChooser();
+	 }
+	
+	 Toast
+		.makeText(MaConstitution.APPLICATION_CONTEXT, 
+		"Partage effective", Toast.LENGTH_SHORT)
+		.show();
 
+	}
  
 }

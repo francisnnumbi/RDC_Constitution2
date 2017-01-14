@@ -1,5 +1,6 @@
 package fnn.smirl.rdc.constitution;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,23 +9,25 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.ToggleButton;
 import fnn.smirl.rdc.constitution.R;
 import java.util.ArrayList;
-import android.widget.ToggleButton;
-import android.widget.CompoundButton;
 
 public class Recherche extends Fragment
 {
+ private static Handler handler2 = new Handler();
+ private static final int PAUSE = 500;
 
  private String baseName;
  private int baseSize;
  private int occurences = 0;
- ToggleButton recherche_play_tts;
+ private static ToggleButton recherche_play_tts;
+ Constitution cons = null;
 
  EditText recherche_phrase;
  ImageButton recherche_btn;
@@ -39,7 +42,7 @@ public class Recherche extends Fragment
  {
 	// TODO: Implement this method
 	View view = inflater.inflate(R.layout.recherche, container, false);
-	
+
 	return view;
  }
 
@@ -50,7 +53,7 @@ public class Recherche extends Fragment
 	super.onActivityCreated(savedInstanceState);
 	init();
 	fillConstitution();
-	
+	handler2 = new Handler();
  }
 
  private boolean fillConstitution()
@@ -110,14 +113,16 @@ public class Recherche extends Fragment
 		public void onCheckedChanged(CompoundButton p1, boolean p2)
 		{
 		 // TODO: Implement this method
-		 if(p2){
+		 if (p2){
 			MaConstitution.speak_tts(recherche_viewer.getText().toString());
+			start();
 		 }else{
 			MaConstitution.stop_tts();
+			pause();
 		 }
 		}
 	 });
-	
+
 	baseName = getResources().getString(R.string.article_name);
 	baseSize = getResources().getInteger(R.integer.article_size);
 
@@ -148,11 +153,10 @@ public class Recherche extends Fragment
 		 try
 		 {
 			key = recherche_list.getItemAtPosition(p3).toString();
-			String value = ((Constitution)recherche_list.getItemAtPosition(p3)).toDetailedString();
-			//Alert.shortMessage(getApplicationContext(), "cccc: " + value);
+			cons = (Constitution)recherche_list.getItemAtPosition(p3);
+			String value = cons.toDetailedString();
 			recherche_viewer.setText(value);
-			//((TextView)findViewById(R.id.articleHeader)).setText(key);
-
+			MaConstitution.SHARABLE_CONSTITUTION = cons;
 		 }
 		 catch (Exception ex)
 		 {}
@@ -168,4 +172,34 @@ public class Recherche extends Fragment
 	String inputIt = recherche_phrase.getText().toString();
 	fillArray(inputIt);
  }
+
+ private static void start(){
+	if (handler2 == null){
+	 handler2 = new Handler();
+	}
+	// call runner with handler
+	handler2.post(r2);
+ }
+
+ private static void pause(){
+	handler2.removeCallbacks(r2);
+
+ }
+
+ private static Runnable r2 = new Runnable(){
+
+	@Override
+	public void run()
+	{
+	 // TODO: Implement this method
+	 if (!Tts.isReading()){
+		recherche_play_tts.setChecked(false);
+		recherche_play_tts.setBackgroundResource(R.drawable.speech_toggle_selector);
+		pause();
+	 }
+
+	 handler2.postDelayed(r2, PAUSE);
+	}
+
+ };
 }

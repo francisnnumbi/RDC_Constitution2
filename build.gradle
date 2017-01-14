@@ -8,7 +8,7 @@ android {
         applicationId "fnn.smirl.rdc.constitution"
         minSdkVersion 8
         targetSdkVersion 14
-        versionCode 3
+        versionCode 31
         versionName "3.1."
     }
     buildTypes {

@@ -31,15 +31,6 @@
 			android:layout_marginRight="10dp"
 			android:id="@+id/hymne_play_btn"/>
 
-		<Button
-			android:layout_height="wrap_content"
-			android:text="Stopper"
-			android:textColor="@drawable/list_view_d_text_color_selector"
-			android:background="@drawable/list_view_d_selector"
-			android:layout_width="wrap_content"
-			android:layout_marginLeft="10dp"
-			android:id="@+id/hymne_stop_btn"/>
-
 	</LinearLayout>
 
 	<ScrollView
