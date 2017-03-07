@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<resources>
-		<color name="black_color">#000000</color>
-		<color name="text_color">#000000</color>
-		<color name="home_bg_solid">#cccccc</color>
-		<color name="home_bg_stroke">#555555</color>
-		<color name="header_article_solid">#dddddd</color>
-		<color name="header_article_stroke">#222222</color>
+		<color name="home_bg_solid">#33bbee</color>
+		<color name="home_bg_stroke">#33ccff</color>
+		<color name="header_article_solid">#66ccff</color>
+		<color name="header_article_stroke">#33bbff</color>
 		<color name="list_gradient_start">#cccccc</color>
 		<color name="list_gradient_end">#333333</color>
 		<color name="list_gradient_start_pressed">#8a8a8a</color>
 		<color name="list_gradient_end_pressed">#222222</color>
+		<color name="window_background">#cc000000</color>
+		<color name="my_primary">#ed1c24</color>
+		<color name="my_primary_dark">#cc0000</color>
+		<color name="my_primary_light">#b3e5fc</color>
+		<color name="my_accent">#ff5722</color>
+		<color name="my_primary_text">#ffffff</color>
+		<color name="my_secondary_text">#ffffff</color>
+		<color name="my_icons">#ffffff</color>
+		<color name="my_divider">#b6b6b6</color>
 	</resources>

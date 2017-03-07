@@ -1,15 +1,16 @@
-package fnn.smirl.rdc.constitution;
+package fnn.smirl.rdc.constitution.fragment;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import fnn.smirl.rdc.constitution.R;
-import android.widget.Button;
 import android.view.View.OnClickListener;
-import android.os.Handler;
+import android.view.ViewGroup;
+import android.widget.Button;
+import fnn.smirl.rdc.constitution.MaConstitution;
+import fnn.smirl.rdc.constitution.R;
 
 public class Hymne extends Fragment
 {
@@ -31,9 +32,9 @@ public class Hymne extends Fragment
 		{
 		 // TODO: Implement this method
 		 if (mp != null && mp.isPlaying()){
-			stop();
+			//stop();
 		 }else{
-			play();
+			//play();
 		 }
 		}
 	 });

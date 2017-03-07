@@ -1,4 +1,4 @@
-package fnn.smirl.rdc.constitution;
+package fnn.smirl.rdc.constitution.utils;
 
 public class Constitution
 {

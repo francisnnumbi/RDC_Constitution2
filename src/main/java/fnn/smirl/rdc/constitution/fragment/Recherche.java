@@ -1,25 +1,20 @@
-package fnn.smirl.rdc.constitution;
+package fnn.smirl.rdc.constitution.fragment;
+import android.view.*;
+import android.widget.*;
+import fnn.smirl.rdc.constitution.utils.*;
+
+import fnn.smirl.rdc.constitution.R;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.ToggleButton;
-import fnn.smirl.rdc.constitution.R;
 import java.util.ArrayList;
+import fnn.smirl.rdc.constitution.MaConstitution;
 
 public class Recherche extends Fragment
 {
+
  private static Handler handler2 = new Handler();
  private static final int PAUSE = 500;
 
@@ -33,6 +28,7 @@ public class Recherche extends Fragment
  ImageButton recherche_btn;
  TextView recherche_compte, recherche_viewer;
  ListView recherche_list;
+ 
 
  private Constitution[] constitutions;
  private ArrayList<Constitution> map = new ArrayList<Constitution>();
@@ -51,9 +47,9 @@ public class Recherche extends Fragment
  {
 	// TODO: Implement this method
 	super.onActivityCreated(savedInstanceState);
-	init();
-	fillConstitution();
-	handler2 = new Handler();
+	//init();
+	//fillConstitution();
+	//handler2 = new Handler();
  }
 
  private boolean fillConstitution()
@@ -70,22 +66,26 @@ public class Recherche extends Fragment
 
 		constitutions[i] = new Constitution("", "", "", "", key.replace("_", " "), value);
 	 }
+
 	}
 	catch (Exception exe)
 	{
-	 // Alert.shortMessage(this, exe.getMessage());
+
 	}
 	return true;
  }
 
  private boolean fillArray(String phrase)
  {
+
 	map.clear();
 	for (int i = 0; i < constitutions.length; i++)
 	{
 	 try
 	 {
+
 		String value = Harmony.harmonize(MaConstitution.APPLICATION_CONTEXT, constitutions[i].getText());
+		
 		phrase = Harmony.harmonize(MaConstitution.APPLICATION_CONTEXT, phrase);
 		if (value.toLowerCase().contains(phrase.toLowerCase()))
 		{
@@ -96,8 +96,9 @@ public class Recherche extends Fragment
 	 catch (Exception ex)
 	 {}
 	}
+	
 	occurences = map.size();
-	ArrayAdapter list = new ArrayAdapter<Constitution>(MaConstitution.APPLICATION_CONTEXT, R.layout.listview_model, map);
+	ArrayAdapter list = new ArrayAdapter<Constitution>(MaConstitution.APPLICATION_CONTEXT, R.layout.tamplate, map);
 	recherche_list.setAdapter(list);
 	recherche_compte.setText("" + occurences);
 	return true;
@@ -105,7 +106,7 @@ public class Recherche extends Fragment
 
  private void init()
  {
-
+	Toaster.init(MaConstitution.APPLICATION_CONTEXT);
 	recherche_play_tts = (ToggleButton)getView().findViewById(R.id.recherche_play_tts);
 	recherche_play_tts.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
 
@@ -113,10 +114,13 @@ public class Recherche extends Fragment
 		public void onCheckedChanged(CompoundButton p1, boolean p2)
 		{
 		 // TODO: Implement this method
-		 if (p2){
+		 if (p2)
+		 {
 			MaConstitution.speak_tts(recherche_viewer.getText().toString());
 			start();
-		 }else{
+		 }
+		 else
+		 {
 			MaConstitution.stop_tts();
 			pause();
 		 }
@@ -149,14 +153,13 @@ public class Recherche extends Fragment
 		public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
 		{
 		 // TODO: Implement this method
-		 String key = "";
+		 
 		 try
 		 {
-			key = recherche_list.getItemAtPosition(p3).toString();
 			cons = (Constitution)recherche_list.getItemAtPosition(p3);
 			String value = cons.toDetailedString();
 			recherche_viewer.setText(value);
-			MaConstitution.SHARABLE_CONSTITUTION = cons;
+			//MaConstitution.SHARABLE_CONSTITUTION = cons;
 		 }
 		 catch (Exception ex)
 		 {}
@@ -173,15 +176,18 @@ public class Recherche extends Fragment
 	fillArray(inputIt);
  }
 
- private static void start(){
-	if (handler2 == null){
+ private static void start()
+ {
+	if (handler2 == null)
+	{
 	 handler2 = new Handler();
 	}
 	// call runner with handler
 	handler2.post(r2);
  }
 
- private static void pause(){
+ private static void pause()
+ {
 	handler2.removeCallbacks(r2);
 
  }
@@ -192,7 +198,8 @@ public class Recherche extends Fragment
 	public void run()
 	{
 	 // TODO: Implement this method
-	 if (!Tts.isReading()){
+	 if (!Tts.isReading())
+	 {
 		recherche_play_tts.setChecked(false);
 		recherche_play_tts.setBackgroundResource(R.drawable.speech_toggle_selector);
 		pause();

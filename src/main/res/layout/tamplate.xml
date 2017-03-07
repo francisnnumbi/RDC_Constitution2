@@ -3,12 +3,13 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
-	android:id="@+id/listviewLabel"
+	android:id="@+id/item1"
+	android:text="Place holder"
+	android:padding="5dp"
+	android:typeface="monospace"
 	android:textStyle="bold|italic"
-	android:background="@drawable/list_view_d_selector"
-	android:typeface="serif"
-	android:textColor="@drawable/list_view_d_text_color_selector"
-	android:textSize="@dimen/list_text_size">
+	android:textSize="13sp"
+	android:textScaleX="1.1">
 
 </TextView>
 

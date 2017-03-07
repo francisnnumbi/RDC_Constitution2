@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+	<item
+		android:id="@+id/a_p_show"
+		android:title="Afficher"/>
+    <item
+        android:id="@+id/a_p_bookmark"
+        android:title="Favorie"/>
+			<item
+        android:id="@+id/a_p_note"
+        android:title="Note"/>
+    
+</menu>

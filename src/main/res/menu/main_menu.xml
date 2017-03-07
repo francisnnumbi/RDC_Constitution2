@@ -3,6 +3,9 @@
 	<item
 		android:id="@+id/mm_share"
 		android:title="@string/mm_share"/>
+	<item
+		android:id="@+id/mm_bookmark"
+		android:title="@string/mm_bookmark"/>
     <item
         android:id="@+id/mm_about"
         android:title="@string/mm_about"/>

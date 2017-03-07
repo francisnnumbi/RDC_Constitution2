@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<resources>
-		<array name="drawer_items">
+		<array name="tabs">
+			<item>Portail</item>
 			<item>Articles</item>
 			<item>Recherche</item>
-			<item>À Propos</item>
-			<item>Quitter</item>
+			<item>Hymne</item>
+			<item>Favorie</item>
 		</array>
 		<array name="a">
 			<item>à</item>

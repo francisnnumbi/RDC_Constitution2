@@ -1,4 +1,4 @@
-package fnn.smirl.rdc.constitution;
+package fnn.smirl.rdc.constitution.utils;
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
 import java.util.Locale;
