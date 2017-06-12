@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-	<resources>
-		<color name="black_color">#000000</color>
-		<color name="text_color">#000000</color>
-		<color name="home_bg_solid">#cccccc</color>
-		<color name="home_bg_stroke">#555555</color>
-		<color name="header_article_solid">#dddddd</color>
-		<color name="header_article_stroke">#222222</color>
-		<color name="list_gradient_start">#cccccc</color>
-		<color name="list_gradient_end">#333333</color>
-		<color name="list_gradient_start_pressed">#8a8a8a</color>
-		<color name="list_gradient_end_pressed">#222222</color>
-	</resources>
+<resources>
+	<color name="list_gradient_start">#626262</color>
+	<color name="list_gradient_end">#242424</color>
+	<color name="list_gradient_start_pressed">#8a8a8a</color>
+	<color name="list_gradient_end_pressed">#222222</color>
+	<color name="window_background">#cc000044</color>
+	<color name="primary">#000077</color>
+  <color name="primary_dark">#3a3ac4</color>
+  <color name="primary_light">#0000c4</color>
+  <color name="accent">#ffff3d00</color>
+  <color name="primary_text">#212121</color>
+  <color name="secondary_text">#727272</color>
+  <color name="icons">#FFFFFF</color>
+  <color name="divider">#B6B6B6</color>
+</resources>
+

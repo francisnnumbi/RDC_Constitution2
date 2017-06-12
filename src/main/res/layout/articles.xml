@@ -3,41 +3,77 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:orientation="vertical"
-	android:background="@drawable/home_bg">
+	android:orientation="vertical">
 
-	<RelativeLayout
+	<GridLayout
 		android:id="@+id/articles_rl0"
 		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_alignParentTop="true"
-		android:background="@drawable/header_article">
+		android:alignmentMode="alignMargins"
+		android:layout_marginTop="10dp">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Titre:"
+			android:layout_width="wrap_content"
+			android:gravity="center"/>
+
+		<Spinner
+			android:id="@+id/titre_spinner"
+			android:layout_height="20dp"
+			android:spinnerMode="dropdown"
+			android:layout_width="wrap_content"
+			android:layout_marginRight="10dp"
+			android:background="@drawable/list_view_d_selector"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Chapitre:"
+			android:layout_width="wrap_content"
+			android:gravity="center"/>
+
+		<Spinner
+			android:id="@+id/chapitre_spinner"
+			android:layout_height="20dp"
+			android:layout_width="wrap_content"
+			android:spinnerMode="dropdown"
+			android:background="@drawable/list_view_d_selector"
+			android:layout_marginRight="10dp"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Section:"
+			android:layout_width="wrap_content"
+			android:gravity="center"/>
+
+		<Spinner
+			android:id="@+id/section_spinner"
+			android:layout_height="20dp"
+			android:layout_width="wrap_content"
+			android:spinnerMode="dropdown"
+			android:background="@drawable/list_view_d_selector"
+			android:layout_marginRight="10dp"/>
 
 		<TextView
 			android:text="Articles"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:gravity="center"
 			android:layout_alignParentLeft="true"
 			android:id="@+id/active_article"
 			android:textAlignment="center"
 			android:layout_centerHorizontal="true"
 			android:layout_centerVertical="true"
 			android:layout_centerInParent="true"
-			android:layout_marginLeft="20dp"/>
+			android:layout_row="1"
+			android:layout_columnSpan="6"
+			android:layout_column="0"
+			android:background="@drawable/list_view_d_selector"
+			android:gravity="center"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"/>
 
-		<ToggleButton
-			android:layout_height="wrap_content"
-			android:text=""
-			android:layout_width="wrap_content"
-			android:layout_toLeftOf="@+id/articles_stop_tts"
-			android:layout_alignParentRight="true"
-			android:id="@+id/articles_play_tts"
-			android:textOn=""
-			android:textOff=""
-			android:background="@drawable/speech_toggle_selector"/>
-
-	</RelativeLayout>
+	</GridLayout>
 
 	<RelativeLayout
 		android:id="@+id/articles_rl1"
@@ -55,8 +91,6 @@
 			<ListView
 				android:id="@+id/articleslist"
 				android:layout_height="fill_parent"
-				android:textColor="@drawable/list_view_d_text_color_selector"
-				android:listSelector="@drawable/list_view_d_selector"
 				android:layout_width="fill_parent"/>
 
 		</LinearLayout>
@@ -67,19 +101,18 @@
 			android:layout_toRightOf="@id/articlesLinearLayout1"
 			android:layout_alignParentRight="true"
 			android:layout_alignParentEnd="true">
-
+			
+				
 			<TextView
 				android:layout_height="match_parent"
 				android:layout_width="match_parent"
 				android:id="@+id/article_viewer"
 				android:textIsSelectable="true"
 				android:textAlignment="gravity"
+				android:background="@drawable/list_view_d_selector"
 				android:gravity="fill|start|end"
 				android:padding="5dp"/>
-
 		</ScrollView>
-
 	</RelativeLayout>
-
 </RelativeLayout>
 

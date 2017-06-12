@@ -1,7 +1,39 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <item
-        android:id="@+id/mm_about"
-        android:title="À propos"/>
-    
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/mm_read"
+		app:showAsAction="always"
+		android:icon="@drawable/ic_volume_high"
+		android:orderInCategory="101"
+		android:title="@string/mm_read"/>
+	<item
+		android:id="@+id/mm_share"
+		android:orderInCategory="102"
+		app:showAsAction="always"
+		android:icon="@drawable/ic_share_variant"
+		android:title="@string/mm_share"/>
+	<item
+		android:id="@+id/mm_bookmark"
+		app:showAsAction="always"
+		android:orderInCategory="103"
+		android:icon="@drawable/ic_bookmark_outline"
+		android:title="@string/mm_bookmark"/>
+	<item
+		android:id="@+id/mm_about"
+		android:orderInCategory="104"
+		android:title="@string/mm_about"/>
+	<item
+		android:id="@+id/mm_help"
+		android:orderInCategory="105"
+		android:title="@string/mm_help"/>
+	<item
+		android:id="@+id/mm_sync"
+		android:orderInCategory="106"
+		android:title="@string/mm_sync"/>
+	<item
+		android:id="@+id/mm_quit"
+		android:orderInCategory="107"
+		android:title="@string/mm_quit"/>
+
 </menu>

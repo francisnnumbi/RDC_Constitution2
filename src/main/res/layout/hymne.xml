@@ -8,11 +8,14 @@
 
 	<TextView
 		android:text="Hymne National"
+		android:textColorPrimary="@color/primary_text"
 		android:layout_alignParentTop="true"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/hymne_tv1"
-		android:gravity="center"/>
+		android:gravity="center"
+		android:textStyle="bold"
+		android:textSize="31sp"/>
 
 	<LinearLayout
 		android:orientation="horizontal"
@@ -29,16 +32,9 @@
 			android:background="@drawable/list_view_d_selector"
 			android:layout_width="wrap_content"
 			android:layout_marginRight="10dp"
-			android:id="@+id/hymne_play_btn"/>
-
-		<Button
-			android:layout_height="wrap_content"
-			android:text="Stopper"
-			android:textColor="@drawable/list_view_d_text_color_selector"
-			android:background="@drawable/list_view_d_selector"
-			android:layout_width="wrap_content"
-			android:layout_marginLeft="10dp"
-			android:id="@+id/hymne_stop_btn"/>
+			android:id="@+id/hymne_play_btn"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"/>
 
 	</LinearLayout>
 
@@ -56,7 +52,7 @@
 			android:layout_height="match_parent"
 			android:layout_width="match_parent"
 			android:gravity="center"
-			android:textColor="#122BDC"
+			android:textColor="@color/primary_text"
 			android:typeface="monospace"
 			android:textSize="15sp"
 			android:textStyle="bold|italic"/>
